@@ -40,10 +40,10 @@ const BoardViewContent = ({boardId}) =>{
 
     // 게시판 데이터 가져오기
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_SERVER_URL}/board/detail/${boardId}/${sessionStorage.getItem('token')}`)
+        console.log("detail board url",process.env.REACT_APP_SERVER_URL,"/board/detail/",boardId,sessionStorage.getItem('token'));
+        axios.get(`${process.env.REACT_APP_SERVER_URL}/board/detail/${boardId}`)
         .then(res => {
-            console.log(res)
-            console.log(res.data.userData['userId'], res.data.boardData["userId"])
+            console.log("hi")
             setUserData(res.data.userData)
             if (res.data === 'DELETE') {
                 alert('삭제된 게시물입니다:)')
