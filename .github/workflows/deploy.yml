@@ -6,7 +6,7 @@ on:
 
 env:
   AWS_REGION: ap-northeast-2
-  S3_BUCKET_NAME: firststepbucket
+  S3_BUCKET_NAME: fs-front-bucket
   
 permissions:
   contents: read
